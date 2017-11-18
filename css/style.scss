@@ -1,0 +1,512 @@
+@charset "utf-8";
+@import "compass";
+
+// Font
+$BaseFontFamily: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$Spinnaker: 'Spinnaker', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+
+// Color
+$BackgroundColor: #FCFCFC;
+$LightGray: #DDD;
+$MainFontColor: #262423;
+$SubFontColor: #766F6C;
+$Yellow: #ffee6b;
+$LightBlue: #4f9ace;
+
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+  font-size: $size + px;
+  font-size: ($size / $base) * 1rem;
+}
+
+body {
+    color: $MainFontColor;
+    @include fontsize(16);
+    font-family: $BaseFontFamily;
+    line-height: 1.8;
+    letter-spacing: 0.1rem;
+    background-color: $BackgroundColor;
+}
+
+a {
+    text-decoration: none;
+    @include link-colors($MainFontColor, lighten($MainFontColor, 50%), lighten($MainFontColor, 50%), $MainFontColor);
+}
+
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+    text-align: center;
+}
+
+/* Font
+------------------------------------------------------------*/
+.uppercase {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: $Spinnaker;
+    @include fontsize(30);
+    letter-spacing: 0.3rem;
+    @extend .uppercase;
+    margin:0;
+}
+
+h2 {
+    @include fontsize(12);
+    color: $SubFontColor;
+    font-weight: normal;
+    margin: 0;
+}
+
+p {
+    @include fontsize(14);
+}
+
+
+// PC表示
+
+header {
+
+    #pc_cover {
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/cover.jpg);
+        background-size: cover;
+        background-position: center bottom;
+        
+        .menu_wrapper {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.5);
+            position: fixed;
+            z-index: 100;
+            
+            .menu_container {
+                display: flex;
+                justify-content: space-between;
+                width: 70%;
+                margin: 0 auto;
+                
+                img {
+                    width: 150px;
+                    margin-top: 8px;
+                }
+                
+                ul {
+                    font-family: $Spinnaker;
+                    @extend .uppercase;
+                    @include fontsize(18);
+                    list-style: none;
+                    margin: 0;
+                
+                    li {
+                        display: inline-block;
+                        margin-top: 35px;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+    
+    #sp_cover {
+        display: none;
+    }
+}
+
+main {
+    
+    .title {
+        @extend .text-center;
+        margin-bottom: 100px;
+        }
+
+    #profile {
+        .profile_wrapper {
+            width: 70%;
+            margin: 0 auto;
+            padding-top: 150px;
+            padding-bottom: 60px;
+        }
+        
+        .container {
+            display: flex;
+            
+            img {
+                width: 200px;
+                margin: 0 50px;
+            }
+            
+            h3 {
+                display: inline-block;
+                margin: 0;
+                margin-bottom: 20px;
+                @include fontsize(16);
+            }
+            
+            h4 {
+                display: inline-block;
+                margin: 0;
+                margin-left: 10px;
+                @include fontsize(16);
+                font-weight: normal;
+                font-family: $Spinnaker;
+            }
+            
+            h5 {
+                @include fontsize(14);
+                margin: 0;
+            }
+            
+            p {
+                margin: 0;
+                margin-bottom: 20px;
+            }
+            
+            .container_profile {
+                    display: flex;
+            
+                .profile_title {
+                    width: 90px;
+                }
+                
+                .profile_content {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    #works {
+        background-color: $LightBlue;
+        margin: 100px 0;
+        padding-top: 200px;
+        padding-bottom: 250px;
+        -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+        
+        .works_wrapper {
+            width: 70%;
+            margin: 0 auto;
+            
+            
+            .carousel {
+                margin: 0 auto;
+                @extend .text-center;
+                
+                img {
+                    width: 60%;
+                    margin: 0 auto;
+                }
+            }
+                
+            .owl-theme .owl-nav [class*=owl-] {
+                @include fontsize(25);
+                color: $SubFontColor;
+                padding: 3px 15px;
+                margin: 0 15px;
+            }
+        }
+    }
+    
+    #contact {
+        background-color: $Yellow;
+        margin: 100px 0;
+        padding-top: 200px;
+        padding-bottom: 250px;
+        -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+        
+        .contact_wrapper {
+            width: 70%;
+            margin: 0 auto;
+            
+            .contact_text {
+                @extend .text-center;
+                margin-bottom: 30px;
+                
+                p {
+                    margin-bottom: 30px;
+                    
+                    a {
+                        color: $LightBlue;
+                        border-bottom: solid 1px $LightBlue;
+                        padding-bottom: 2px;
+                        @include link-colors($LightBlue, lighten($LightBlue, 30%), lighten($LightBlue, 50%), $LightBlue);
+                    }
+                }
+            }
+
+            form {
+                margin-top: 60px;
+                @include fontsize(14);
+                
+                .contact_container {
+                    display: flex;
+                    justify-content: center;
+                    @include fontsize(14);
+                    
+                    .contact_box1 {
+                        width: 130px;
+                        margin: 10px 0;
+                    }
+                    
+                    .contact_box2 {
+                        margin: 10px 0;
+                        
+                        input {
+                            width: 300px;
+                            padding: 5px;
+                            background-color: $BackgroundColor;
+                            border: none;
+                        }
+                        
+                        textarea {
+                            width:300px;
+                            height: 150px;
+                            padding: 5px;
+                            background-color: $BackgroundColor;
+                            border: none;
+                        }
+                        
+                        p {
+                            margin: 0;
+                            @include fontsize(11)
+                        }
+                    }
+                }
+                
+                .button_container {
+                    margin-top: 10px;
+                    
+                    button {
+                        background-color: $LightGray;
+                        margin-top: 3px;
+                        padding: 5px 20px;
+                        border-style: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    margin: 70px 0;
+    @extend .text-center;
+    
+    p {
+        @include fontsize(13);
+        color: $SubFontColor;
+        margin: 0;
+    }
+}
+
+// SP表示
+
+@media (max-width: 768px) {
+    
+a {
+    text-decoration: none;
+    @include link-colors($MainFontColor, $MainFontColor, $MainFontColor, $MainFontColor);
+}
+
+
+// Header
+
+header {
+    
+    #pc_cover {
+        display: none;
+    }
+    
+    #sp_cover {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/cover.jpg);
+        background-size: cover;
+        background-position: 25% 50%;
+        
+        .container {
+            width: 100%;
+            position: fixed;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(255, 255, 255, 0.5);
+            
+            img {
+                margin-top: 10px;
+                margin-left: 10px;
+                width: 150px;
+            }
+        
+            .sp_menu {
+                
+                .sp_menu_icon {
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 15px;
+                    margin-right: 10px;
+                    @include border-radius(50%);
+                    background-color: $LightGray;
+                    background-image: url(../images/menu_icon.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 25px 25px;
+                }
+            
+                ul {
+                    margin: 0;
+                    padding: 0;
+                    width: 180px;
+                    position: absolute;
+                    top: 70px;
+                    right: 2%;
+                    border: 1px solid $SubFontColor;
+                    background: $BackgroundColor;
+                    display: none;
+                    z-index: 100;
+                
+                    li {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                        
+                        a {
+                            display: block;
+                            padding: 10px 8px;
+                            border-bottom: 1px solid $SubFontColor;
+                            @include fontsize(14);
+                            font-family: $Spinnaker;
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    
+    #profile {
+        
+        .profile_wrapper {
+            width: 80%;
+            
+            .container {
+                flex-direction: column;
+        
+                .profile_img {
+                    text-align: center;
+            
+                    img {
+                        margin: 0;
+                    }
+                }
+            
+                .name {
+                    text-align: center;
+                    
+                    h3 {
+                        display: block;
+                        margin: 0;
+                        margin-top: 20px;
+                    }
+                    
+                    h4 {
+                        margin: 0;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    #works {
+        -webkit-clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        
+        .works_wrapper {
+            width: 80%;
+            
+            .carousel{
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    #contact {
+        -webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+        
+        .contact_wrapper {
+            width: 80%;
+            
+            .contact_text {
+                
+                p {
+                    a {
+                        @include link-colors($LightBlue, $LightBlue, $LightBlue, $LightBlue);
+                    }
+                }
+            }
+            
+            form {
+                .contact_container {
+                    flex-direction: column;
+                    
+                    .contact_box1 {
+                        margin: 0;
+                    }
+                    
+                    .contact_box2 {
+                        margin-top: 0;
+                        margin-bottom: 15px;
+                        
+                        input
+                        {
+                            width: 100%;
+                        }
+                        
+                        textarea {
+                            width: 100%;
+                        }
+                        
+                        .button_container {
+                            text-align: center;
+                            
+                            button {
+                                padding: 5px 40px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    
+    p {
+        @include fontsize(10);
+    }
+}
+    
+}

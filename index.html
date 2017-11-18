@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <meta charset="utf-8">
+    <title>Kensuke OKAMURA - Portfolio Website</title>
+    <meta name="description" content="ウェブデザイナーを目指し奮闘中の男のポートフォリオサイトです。自分の作品を展示しています。">
+    <meta name="author" content="ウェブデザイン,web design,ウェブデザイナー,web designer,コーディング,coding,岡村健介,okamura kensuke,ワードプレス,html,css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Spinnaker">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+    <script src="js/portfolio.js"></script>
+    
+    <link rel="shortcut icon" href="images/favicon.ico" >
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="http://www.kokamura.sakura.ne.jp/images/apple-touch-icon.png">
+        
+</head>
+<body>
+    
+<header>
+    <div id="pc_cover">
+        <div class="menu_wrapper">
+            <div class="menu_container">
+                <div>
+                    <img src="images/logo.png" srcset="images/logo@2x.png 2x" alt="">
+                </div>
+                <div class="pc_menu">
+                    <ul>
+                        <li><a href="#pc_cover">Top</a></li>
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="sp_cover">
+        <div class="container">
+            <div><img src="images/logo.png" srcset="images/logo@2x.png 2x" alt=""></div>
+            <div class="sp_menu">
+                <div class="sp_menu_icon"></div>
+                <ul class="sp_menu_toggle">
+                    <li><a href="#sp_cover">Top</a></li>
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="profile">
+        <div class="profile_wrapper">
+            <div class="title">
+            <h1 class="wow fadeInUp">Profile</h1>
+            <h2>プロフィール</h2>
+        </div>
+        <div class="container">
+            <div class="profile_img">
+                <img src="images/profile.jpg" srcset="images/profile@2x.jpg" alt="">
+            </div>
+            <div>
+                <div>
+                    <div class="name">
+                        <h3>岡村 健介</h3>
+                        <h4>Kensuke OKAMURA</h4>
+                    </div>
+                    <p>
+                        1988年、東京生まれ埼玉育ち。大学ではドイツ語を専攻、さらに大学院へ進学し「ソルブ語」と呼ばれるドイツの少数言語について研究する。大学院修了後、3年間の高校でのドイツ語教員を経験。現在、ウェブ関係での転職を目指し、勉強中。将来的にはドイツで仕事をしたいと考えている。
+                    </p>
+                </div>
+                <div class="container_profile">
+                    <div class="profile_title"><h5>趣味</h5></div>
+                    <div class="profile_content"><p>色々な言語を学ぶこと、筋トレ</p></div>
+                </div>
+                <div class="container_profile">
+                    <div class="profile_title"><h5>言語</h5></div>
+                    <div class="profile_content"><p>日本語、ドイツ語、英語</p></div>
+                </div>
+                <div class="container_profile">
+                    <div class="profile_title"><h5>スキル</h5></div>
+                    <div class="profile_content"><p>HTML/CSS、JavaScript、WordPress、Photoshop（いずれも勉強中）</p></div>
+                </div>
+            </div>
+        </div> 
+        </div>
+    </section>
+        
+    <section id="works">
+        <div class="works_wrapper">
+            <div class="title">
+                <h1 class="wow fadeInUp">Works</h1>
+                <h2>作品</h2>
+            </div>
+            <div class="owl-carousel owl-theme carousel">
+                <div>
+                    <img src="images/work1.jpg" alt="">
+                    <p>Portfolio Website (2017)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <section id="contact">
+        <div class="contact_wrapper">
+            <div class="title">
+                <h1 class="wow fadeInUp">Contact</h1>
+                <h2>お問い合わせ</h2>
+            </div>
+            <div class="contact_text">
+                <p>何かございましたら、下のお問い合わせフォームよりお気軽にどうぞ。</p>
+                <p><a href="https://twitter.com/hecchio" target="_blank">Twitterはこちら。</a></p>
+            </div>
+            <form class="formrun" action="https://form.run/api/v1/r/o5t7l07bap8c953499osuoov" method="post">
+                <div class="contact_container">
+                    <div class="contact_box1">
+                        <label>お名前</label>
+                    </div>
+                    <div class="contact_box2">
+                        <input name="お名前" type="text" data-formrun-required>
+                        <div data-formrun-show-if-error="お名前"><p>お名前を入力してください</p></div>
+                    </div>
+                </div>
+                <div class="contact_container">
+                    <div class="contact_box1">
+                        <label>メールアドレス</label>
+                    </div>
+                    <div class="contact_box2">
+                        <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required>
+                        <div data-formrun-show-if-error="メールアドレス"><p>メールアドレスを正しく入力してください</p></div>
+                    </div>
+                </div>
+                <div class="contact_container">
+                    <div class="contact_box1">
+                        <label>メッセージ</label>
+                    </div>
+                    <div class="contact_box2">
+                        <textarea name="メッセージ" data-formrun-required></textarea>
+                        <div data-formrun-show-if-error="メッセージ"><p>メッセージを入力してください</p></div>
+                        <div class="button_container">
+                            <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中...">送信</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+    
+<footer>
+    <p>Copyright (C) Kensuke OKAMURA all rights reserved.</p>
+</footer>
+
+<script src="js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+</body>
+</html>
