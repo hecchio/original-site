@@ -95,7 +95,7 @@ header {
                 margin: 0 auto;
                 
                 img {
-                    width: 150px;
+                    width: 250px;
                     margin-top: 8px;
                 }
                 
@@ -108,7 +108,7 @@ header {
                 
                     li {
                         display: inline-block;
-                        margin-top: 35px;
+                        margin-top: 32px;
                         margin-right: 20px;
                     }
                 }
@@ -148,6 +148,7 @@ main {
                 display: inline-block;
                 margin: 0;
                 margin-bottom: 20px;
+                letter-spacing: 0.4rem;
                 @include fontsize(16);
             }
             
@@ -346,22 +347,21 @@ header {
             img {
                 margin-top: 10px;
                 margin-left: 10px;
-                width: 150px;
+                width: 180px;
             }
         
             .sp_menu {
                 
                 .sp_menu_icon {
-                    width: 50px;
-                    height: 50px;
-                    margin-top: 15px;
-                    margin-right: 10px;
+                    width: 45px;
+                    height: 45px;
+                    margin: 7px 7px 7px 0;
                     @include border-radius(50%);
                     background-color: $LightGray;
                     background-image: url(../images/menu_icon.png);
                     background-repeat: no-repeat;
                     background-position: center center;
-                    background-size: 25px 25px;
+                    background-size: 20px 20px;
                 }
             
                 ul {
@@ -369,7 +369,7 @@ header {
                     padding: 0;
                     width: 180px;
                     position: absolute;
-                    top: 70px;
+                    top: 55px;
                     right: 2%;
                     border: 1px solid $SubFontColor;
                     background: $BackgroundColor;
